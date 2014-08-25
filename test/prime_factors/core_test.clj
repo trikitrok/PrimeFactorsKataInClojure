@@ -14,6 +14,7 @@
         (factorize 3) => [3])
   
   (fact "any power of primes has only one factor repeated as many times as the exponent"
-        (factorize 8) => [2 2 2]))
+        (factorize 8) => [2 2 2]
+        (factorize 81) => [3 3 3 3]))
 
 
