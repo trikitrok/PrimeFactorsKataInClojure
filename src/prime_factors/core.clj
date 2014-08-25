@@ -1,8 +1,8 @@
 (ns prime-factors.core)
 
 (defn factorize [number]
-  (cond 
-    (= number 1) []
-    (zero? (mod number 2)) (conj (factorize (/ number 2)) 2)
-    (zero? (mod number 3)) (conj (factorize (/ number 3)) 3)
-    :else [number]))
+  (loop [number number prime 2 factors []]
+    (cond 
+      (= number 1) factors
+      (zero? (mod number prime)) (recur (/ number prime) prime (conj factors prime))
+      :else (recur number (+ prime 1) factors))))
