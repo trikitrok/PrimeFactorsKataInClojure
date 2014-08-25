@@ -3,4 +3,4 @@
 (defn factorize [number]
   (if (= number 1) 
     []
-    [2]))
+    [number]))

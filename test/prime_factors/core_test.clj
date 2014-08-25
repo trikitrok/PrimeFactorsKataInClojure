@@ -4,11 +4,13 @@
 
 (println "You should expect to see three failures below.")
 
-(facts "about prime factors computation"
+(facts 
+  "about prime factors computation"
   (fact "1 has no factors"
-    (factorize 1) => [])
+        (factorize 1) => [])
   
-  (fact "2 is its own factor"
-    (factorize 2) => [2]))
+  (fact "a prime has only one factor: itself"
+        (factorize 2) => [2]
+        (factorize 3) => [3]))
 
-  
+
