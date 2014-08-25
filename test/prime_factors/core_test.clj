@@ -11,6 +11,9 @@
   
   (fact "a prime has only one factor: itself"
         (factorize 2) => [2]
-        (factorize 3) => [3]))
+        (factorize 3) => [3])
+  
+  (fact "any power of primes has only one factor repeated as many times as the exponent"
+        (factorize 8) => [2 2 2]))
 
 
