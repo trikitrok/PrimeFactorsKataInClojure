@@ -15,6 +15,10 @@
   
   (fact "any power of primes has only one factor repeated as many times as the exponent"
         (factorize 8) => [2 2 2]
-        (factorize 81) => [3 3 3 3]))
+        (factorize 81) => [3 3 3 3])
+  
+  (fact "any other positive integer has more than one factor"
+        (factorize 10) => [2 5]
+        (factorize 60) => [2 2 3 5]))
 
 
